@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Double the value of given Array</h2>
+
+    <!-- <p>Please input a number between 5 and 10:</p> -->
+    <p id="p01"></p>
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p02"></p>
+
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+        const message = document.getElementById("p01");
+        message.innerHTML = arr;
+        const second = [];
+        const myFunction = () => {
+
+
+            const array = arr.map((user) => {
+                second.push(user * 2);
+            }
+            )
+            console.log(second);
+            const new_arr = document.getElementById("p02");
+            new_arr.innerHTML = second;
+        }
+    </script>
+
+</body>
+
+</html>

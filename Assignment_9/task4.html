@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Multiple each item of array by 10</h2>
+    <p id="p01"></p>
+    <button type="button" onclick="show()">Multiplt of 10</button>
+    <p id="p02"></p>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const input_array = document.getElementById("p01")
+        input_array.innerHTML = arr;
+
+        const show = () => {
+            // const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+            const array = arr.map((user) => {
+                return user * 10
+            }
+            )
+            const input_array = document.getElementById("p02")
+            input_array.innerHTML = array;
+        }
+
+        // console.log(array)
+    </script>
+</body>
+
+</html>

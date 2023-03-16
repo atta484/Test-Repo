@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Show Full Name</h2>
+    <input type="text" id="input_1" placeholder="First Name">
+    <input type="text" id="input_2" placeholder="Last Name">
+    <button onclick="nameEvent()">Get Full Name</button>
+    <p id="p01"></p>
+
+    <br>
+    <br>
+    <br>
+
+    <h2>Double the Input Number</h2>
+    <input type="text" id="input_3" placeholder="Enter Number">
+    <button onclick="double()">Get Double</button>
+    <p id="p02"></p>
+
+    <br>
+    <br>
+    <br>
+
+    <h2>For 3rd check console</h2>
+
+    <script>
+        // function createFullName(firstName, lastName) {
+        //     return firstName + " " + lastName;
+        // }
+        const nameEvent = () => {
+            const firstName = document.getElementById("input_1").value;
+            const lastName = document.getElementById("input_2").value;
+            createFullName(firstName, lastName)
+        }
+
+
+        const createFullName = (firstName, lastName) => {
+            const name = firstName + " " + lastName;
+            const msg = document.getElementById("p01")
+            msg.innerHTML = name;
+        }
+
+
+        // function doubleNumber(number) {
+        //     return number * 2;
+        // }
+        const double = () => {
+            const number = document.getElementById("input_3").value;
+            doubleNumber(number)
+        }
+
+        const doubleNumber = (number) => {
+            const double = number * 2;
+            const dble = document.getElementById("p02")
+            dble.innerHTML = double;
+
+        }
+        // function getEvenNumbers(array) {
+        //     let evenNumbers = [];
+        //     for (let i of array) {
+        //         if (i % 2 === 0) {
+        //             evenNumbers.push(i);
+        //         }
+        //     }
+        //     return evenNumbers;
+        // }
+        array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        const getEvenNumbers = (array) => {
+            let evenNumbers = [];
+            for (let i of array) {
+                if (i % 2 === 0) {
+                    evenNumbers.push(i);
+                }
+            }
+            return evenNumbers;
+        }
+        console.log(evenNumbers);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Check Input</h2>
+
+    <input id="input" type="text">
+    <p>If input number is less than 100, print incremented value by 1 .</p>
+    <p>If the input number is greater than 100, print 0.</p>
+    <button type="button" onclick="eventhandler()">Test Input</button>
+    <p id="p01"></p>
+
+
+    <script>
+
+        const eventhandler = () => {
+            const counter = document.getElementById("input").value;
+            counterFunc(counter);
+        }
+        const counterFunc = (counter) => {
+            if (counter > 100) {
+                counter = 0;
+            } else {
+                counter++;
+            }
+
+            // return counter;
+            const answer = document.getElementById("p01")
+            answer.innerHTML = counter;
+        }
+        // console.log(counterFunc(23));
+
+    </script>
+</body>
+
+</html>

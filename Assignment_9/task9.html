@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Voting System</h2>
+
+    <!-- <p>Please input a number between 5 and 10:</p> -->
+
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+
+    <script>
+        const myFunction = () => {
+            const message = document.getElementById("p01");
+            message.innerHTML = "";
+            let x = document.getElementById("demo").value;
+            try {
+                if (x == "") throw "empty";
+                if (isNaN(x)) throw "not a number";
+                if (x < 18) throw "underaged";
+                if (x >= 18 && x < 25) throw "Young Adult and eligible to cast your vote.";
+                if (x > 25 && x <= 40) throw "Middle Aged Adult and eligible to cast your vote.";
+                if (x > 40 && x <= 60) throw "Old Aged Adult and eligible to cast your vote.";
+                if (x > 40 && x <= 60) throw "Old Aged Adult and eligible to cast your vote.";
+                if (x > 60) throw "not eligible as you are Senior Citizen";
+            }
+            catch (err) {
+                message.innerHTML = "You are " + err;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

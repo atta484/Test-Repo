@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Check Input</h2>
+
+    <input id="input_1" type="text" placeholder="Enter name">
+    <input id="input_2" type="text" placeholder="Enter age">
+    <button type="button" onclick="eventhandler()">Click</button>
+    <p id="p01"></p>
+
+
+    <script>
+        // function nameAge(name, age) {
+        //     console.log("Hello " + name);
+        //     console.log("You are " + age + "years old");
+        // }
+
+        // console.log(nameAge("Ahmad", 23))
+
+        const eventhandler = () => {
+            const name = document.getElementById("input_1").value;
+            const age = document.getElementById("input_2").value;
+            nameAge(name, age)
+        }
+
+        const nameAge = (name, age) => {
+            console.log("Hello " + name);
+            console.log("You are " + age + " years old");
+            const answer = document.getElementById("p01");
+            answer.innerHTML = "Hello " + name + "<br>You are " + age + " years old."
+        }
+
+        // console.log(nameAge("Ali", 29));
+    </script>
+</body>
+
+</html>
